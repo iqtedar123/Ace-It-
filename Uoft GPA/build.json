@@ -1,0 +1,11 @@
+﻿{
+ "android": {
+  "release": {
+    "keystore": "c:\\my-release-key.keystore",
+    "storePassword": "iqtedarisnice",
+    "alias": "MC1",
+    "password": "iqtedarisnice",
+    "keystoreType": ""
+  }
+   }
+}

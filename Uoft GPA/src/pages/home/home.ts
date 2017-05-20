@@ -43,6 +43,13 @@ export class HomePage {
               buttons: ['Dismiss']
           });
           noGradeEnteredAlert.present();
+      } else if (courseWeightMap.size == 0) {
+          let noWeightEnteredAlert = this.alertCtrl.create({
+              title: 'No Weight Selected!',
+              subTitle: 'Please select a course weight.',
+              buttons: ['Dismiss']
+          });
+          noWeightEnteredAlert.present();
       } else {
           let alert = this.alertCtrl.create({
               title: 'GPA Calculated!',

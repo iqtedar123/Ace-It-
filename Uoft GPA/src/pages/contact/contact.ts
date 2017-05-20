@@ -15,4 +15,7 @@ export class ContactPage {
     //openFacebookPage() {
     //    browser.open();
     //}
+    openTwitter() {
+        window.open('https://twitter.com/iQtedar_C');
+    }
 }

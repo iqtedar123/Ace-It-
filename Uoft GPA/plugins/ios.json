@@ -13,9 +13,6 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.techseven.uoftgpa"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         },
@@ -24,7 +21,20 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
+        }
+    }
 }

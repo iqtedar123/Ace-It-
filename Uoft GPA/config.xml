@@ -95,6 +95,9 @@
   <plugin name="cordova-plugin-console" spec="1.0.5" />
   <plugin name="cordova-plugin-statusbar" spec="2.2.1" />
   <plugin name="cordova-plugin-device" spec="1.1.4" />
-  <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
   <preference name="deployment-target" value="10" />
+  <plugin name="cordova-plugin-inappbrowser" spec="~1.7.1" />
+  <plugin name="cordova-plugin-admobpro" spec="~2.28.3" />
+  <plugin name="cordova-connectivity-monitor" spec="~1.2.2" />
+  <plugin name="cordova-plugin-extension" spec="~1.5.1" />
 </widget>

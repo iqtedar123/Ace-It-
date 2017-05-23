@@ -1,15 +1,34 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { NavController, Platform } from 'ionic-angular';
+import { InAppBrowser, AdMob } from 'ionic-native';
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+    constructor(public navCtrl: NavController, private platform: Platform) {
+        this.platform = platform;
+        //let options = {
+        //    adId: 'ca-app-pub-3940256099942544/6300978111',
+        //    adSize: 'SMART_BANNER',
+        //    isTesting: false
+        //};
 
-    constructor(public navCtrl: NavController) {
-        
+       
+        platform.ready().then(() => {
+
+            
+
+            AdMob.createBanner({
+                adId: 'ca-app-pub-6937425280917661/1053575230',
+                adSize: 'SMART_BANNER',
+                isTesting: true
+            }).then(() => {
+                AdMob.showBanner(8);
+            });
+
+        });
     }
     //const browser = this.iab.create('https://www.facebook.com/TechMeister786/?view_public_for=697666376935125');
     //openFacebookPage() {

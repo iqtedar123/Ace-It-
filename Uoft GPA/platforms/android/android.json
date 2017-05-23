@@ -25,7 +25,30 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"connectivity\"><param name=\"android-package\" value=\"com.appfeel.cordova.connectivity.Connectivity\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.admob.AdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest/application": [],
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         }
                     ]
@@ -49,8 +72,17 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cordova.myapp30513f"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.cordova.myapp30513f"
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        },
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
         }
     },
     "dependent_plugins": {},
@@ -81,11 +113,28 @@
             ]
         },
         {
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "pluginId": "cordova-plugin-splashscreen",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "pluginId": "cordova-plugin-inappbrowser",
             "clobbers": [
-                "navigator.splashscreen"
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
+        },
+        {
+            "id": "cordova-connectivity-monitor.connectivity",
+            "file": "plugins/cordova-connectivity-monitor/www/connectivity.js",
+            "pluginId": "cordova-connectivity-monitor",
+            "clobbers": [
+                "window.connectivity"
+            ]
+        },
+        {
+            "id": "cordova-plugin-admobpro.AdMob",
+            "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+            "pluginId": "cordova-plugin-admobpro",
+            "clobbers": [
+                "window.AdMob"
             ]
         }
     ],
@@ -95,6 +144,9 @@
         "cordova-plugin-console": "1.0.5",
         "cordova-plugin-statusbar": "2.2.1",
         "cordova-plugin-device": "1.1.4",
-        "cordova-plugin-splashscreen": "4.0.3"
+        "cordova-plugin-inappbrowser": "1.7.1",
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-plugin-extension": "1.5.1",
+        "cordova-plugin-admobpro": "2.28.3"
     }
 }

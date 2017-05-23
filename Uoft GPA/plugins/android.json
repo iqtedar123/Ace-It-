@@ -22,9 +22,19 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cordova.myapp30513f"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "io.cordova.myapp30513f"
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "com.techseven.uoftgpanew"
+        }
+    }
 }

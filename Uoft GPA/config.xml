@@ -100,4 +100,7 @@
   <plugin name="cordova-plugin-admobpro" spec="~2.28.3" />
   <plugin name="cordova-connectivity-monitor" spec="~1.2.2" />
   <plugin name="cordova-plugin-extension" spec="~1.5.1" />
+  <plugin name="cordova-plugin-googleplus" spec="~5.1.1">
+    <variable name="REVERSED_CLIENT_ID" value="1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com" />
+  </plugin>
 </widget>

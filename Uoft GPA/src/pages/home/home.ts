@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-interface StringMap { [s: string]: Number;}
+import { GooglePlus } from 'ionic-native';
+interface StringMap { [s: string]: Number; }
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -23,6 +24,7 @@ export class HomePage {
     weight3: any;
     weight4: any;
     weight5: any;
+
     constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
 
   }
@@ -165,5 +167,24 @@ export class HomePage {
       });
       gpa = gpa / weightSum;
       return gpa;
+  }
+  login() {
+
+      GooglePlus.login({
+          'webClientId': '1006825539066-qo2vo6vrjv0m2ab3u7g1pq81cl15agig.apps.googleusercontent.com'
+      }).then((res) => {
+          console.log(res);
+      }, (err) => {
+          console.log(err);
+      });
+
+  }
+
+  logout() {
+
+      GooglePlus.logout().then(() => {
+          console.log("logged out");
+      });
+
   }
 }

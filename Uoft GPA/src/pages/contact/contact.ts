@@ -25,15 +25,14 @@ export class ContactPage {
                 adSize: 'SMART_BANNER',
                 isTesting: true
             }).then(() => {
-                AdMob.showBanner(8);
+                AdMob.showBanner(2);
             });
 
         });
     }
-    //const browser = this.iab.create('https://www.facebook.com/TechMeister786/?view_public_for=697666376935125');
-    //openFacebookPage() {
-    //    browser.open();
-    //}
+    openFacebookPage() {
+        window.open('https://www.facebook.com/TechMeister786/?view_public_for=697666376935125');
+    }
     openTwitter() {
         window.open('https://twitter.com/iQtedar_C');
     }

@@ -43,6 +43,14 @@
                         {
                             "xml": "<feature name=\"connectivity\"><param name=\"ios-package\" value=\"CDVAppFeelReachability\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"GooglePlus\"><param name=\"ios-package\" value=\"GooglePlus\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<access origin=\"https://accounts.google.com/*\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -52,6 +60,12 @@
                     "NSAppTransportSecurity": [
                         {
                             "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLName</key><string>REVERSED_CLIENT_ID</string><key>CFBundleURLSchemes</key><array><string>1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com</string></array></dict></array>",
                             "count": 1
                         }
                     ]
@@ -85,6 +99,10 @@
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         },
         "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com",
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         }
     },
@@ -155,6 +173,14 @@
             "clobbers": [
                 "window.connectivity"
             ]
+        },
+        {
+            "id": "cordova-plugin-googleplus.GooglePlus",
+            "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
+            "pluginId": "cordova-plugin-googleplus",
+            "clobbers": [
+                "window.plugins.googleplus"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -166,6 +192,7 @@
         "cordova-plugin-inappbrowser": "1.7.1",
         "cordova-plugin-extension": "1.5.1",
         "cordova-plugin-admobpro": "2.28.3",
-        "cordova-connectivity-monitor": "1.2.2"
+        "cordova-connectivity-monitor": "1.2.2",
+        "cordova-plugin-googleplus": "5.1.1"
     }
 }

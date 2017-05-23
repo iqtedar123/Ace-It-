@@ -16,8 +16,13 @@
     "MediaPlayer.framework": 1,
     "MessageUI.framework": 1,
     "OpenGLES.framework": 1,
-    "SafariServices.framework": 1,
+    "SafariServices.framework": 2,
     "StoreKit.framework": 1,
     "SystemConfiguration.framework": 2,
-    "UIKit.framework": 1
+    "UIKit.framework": 1,
+    "AddressBook.framework": 1,
+    "CoreText.framework": 1,
+    "Security.framework": 1,
+    "libz.tbd": 1,
+    "libz.dylib": 1
 }

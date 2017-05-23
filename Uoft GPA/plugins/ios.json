@@ -30,6 +30,10 @@
         },
         "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-plugin-googleplus": {
+            "REVERSED_CLIENT_ID": "1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com",
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
         }
     },
     "dependent_plugins": {

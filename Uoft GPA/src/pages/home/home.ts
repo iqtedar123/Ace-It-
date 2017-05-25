@@ -171,11 +171,16 @@ export class HomePage {
   login() {
 
       GooglePlus.login({
-          'webClientId': '1006825539066-qo2vo6vrjv0m2ab3u7g1pq81cl15agig.apps.googleusercontent.com'
       }).then((res) => {
-          console.log(res);
+          console.log("result:" + res);
+          let noGradeEnteredAlert = this.alertCtrl.create({
+              title: 'No Grades Entered!',
+              subTitle: 'Please enter a grade.',
+              buttons: ['Dismiss']
+          });
+          noGradeEnteredAlert.present();
       }, (err) => {
-          console.log(err);
+          console.log("error: " + err);
       });
 
   }
@@ -183,6 +188,12 @@ export class HomePage {
   logout() {
 
       GooglePlus.logout().then(() => {
+          let noGradeEnteredAlert = this.alertCtrl.create({
+              title: 'LOGGED OUt Grades Entered!',
+              subTitle: 'Please enter a grade.',
+              buttons: ['Dismiss']
+          });
+          noGradeEnteredAlert.present();
           console.log("logged out");
       });
 

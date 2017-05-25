@@ -20,9 +20,9 @@
     "StoreKit.framework": 1,
     "SystemConfiguration.framework": 2,
     "UIKit.framework": 1,
-    "AddressBook.framework": 1,
-    "CoreText.framework": 1,
-    "Security.framework": 1,
-    "libz.tbd": 1,
-    "libz.dylib": 1
+    "AddressBook.framework": 2,
+    "CoreText.framework": 2,
+    "Security.framework": 2,
+    "libz.tbd": 2,
+    "libz.dylib": 2
 }

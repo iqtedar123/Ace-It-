@@ -32,7 +32,10 @@
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         },
         "cordova-plugin-googleplus": {
-            "REVERSED_CLIENT_ID": "1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com",
+            "REVERSED_CLIENT_ID": "com.googleusercontent.apps.1006825539066-iqrj2528o1s5asl52ugm4hcmpd00hoad",
+            "PACKAGE_NAME": "com.techseven.uoftgpa"
+        },
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.techseven.uoftgpa"
         }
     },

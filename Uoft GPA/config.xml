@@ -29,11 +29,11 @@
     <splash src="resources/android/splash/drawable-land-xxhdpi-screen.png" density="land-xxhdpi" />
     <splash src="resources/android/splash/drawable-land-xxxhdpi-screen.png" density="land-xxxhdpi" />
     <splash src="resources/android/splash/drawable-port-ldpi-screen.png" density="port-ldpi" />
-    <splash src="resources/android/splash/drawable-port-mdpi-screen.png" density="port-mdpi" />
-    <splash src="resources/android/splash/drawable-port-hdpi-screen.png" density="port-hdpi" />
-    <splash src="resources/android/splash/drawable-port-xhdpi-screen.png" density="port-xhdpi" />
-    <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi" />
-    <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi" />
+    <splash src="resources/android/splash/drawable-mdpi-splash.png" density="port-mdpi" />
+    <splash src="resources/android/splash/drawable-hdpi-splash.png" density="port-hdpi" />
+    <splash src="resources/android/splash/drawable-xhdpi-splash.png" density="port-xhdpi" />
+    <splash src="resources/android/splash/drawable-xxhdpi-splash.png" density="port-xxhdpi" />
+    <splash src="resources/android/splash/drawable-xxxhdpi-splash.png" density="port-xxxhdpi" />
   </platform>
   <platform name="ios">
     <allow-intent href="itms:*" />
@@ -83,8 +83,10 @@
   <preference name="DisallowOverscroll" value="true" />
   <preference name="android-minSdkVersion" value="16" />
   <preference name="BackupWebStorage" value="none" />
+  <preference name="SplashScreen" value="screen" />
   <preference name="SplashMaintainAspectRatio" value="true" />
-  <preference name="FadeSplashScreenDuration" value="100" />
+  <preference name="SplashScreenDelay" value="1000" />
+  <preference name="FadeSplashScreenDuration" value="false" />
   <preference name="windows-target-version" value="10.0" />
   <preference name="SplashShowOnlyFirstTime" value="true" />
   <feature name="StatusBar">
@@ -101,6 +103,7 @@
   <plugin name="cordova-connectivity-monitor" spec="~1.2.2" />
   <plugin name="cordova-plugin-extension" spec="~1.5.1" />
   <plugin name="cordova-plugin-googleplus" spec="~5.1.1">
-    <variable name="REVERSED_CLIENT_ID" value="1006825539066-t2sjrmua02ifbm1rggocelakg2fn22vu.apps.googleusercontent.com" />
+    <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.1006825539066-iqrj2528o1s5asl52ugm4hcmpd00hoad" />
   </plugin>
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.3" />
 </widget>

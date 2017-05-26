@@ -6,6 +6,13 @@
       "alias": "MC1",
       "password": "iqtedarisnice",
       "keystoreType": ""
+    },
+    "debug": {
+      "keystore": "C:\\Program Files\\Java\\jdk1.8.0_112\\bin\\debug.keystore",
+      "storePassword": "android",
+      "alias": "androiddebugkey",
+      "password": "android",
+      "keystoreType": ""
     }
   }
 }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, Platform, LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { GooglePlus } from 'ionic-native';
+import { GooglePlus, AdMob } from 'ionic-native';
 interface StringMap { [s: string]: Number; }
 @Component({
   selector: 'page-home',
@@ -25,8 +25,21 @@ export class HomePage {
     weight4: any;
     weight5: any;
 
-    constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
+    constructor(public navCtrl: NavController, private alertCtrl: AlertController, private platform: Platform, private loadingControl: LoadingController) {
+        this.loadingControl = loadingControl;
+        platform.ready().then(() => {
 
+
+
+            AdMob.createBanner({
+                adId: 'ca-app-pub-6937425280917661/1053575230',
+                adSize: 'SMART_BANNER',
+                isTesting: true
+            }).then(() => {
+                AdMob.showBanner(2);
+            });
+
+        });
   }
   onLink(url: string) {
       window.open(url);
@@ -169,18 +182,67 @@ export class HomePage {
       return gpa;
   }
   login() {
-
+      let loading = this.loadingControl.create({
+          content: 'Please wait...'
+      });
+      loading.present();
       GooglePlus.login({
+          'webClientId': '1006825539066-28du38depd8c9g71en8c0h1b438d8gn6.apps.googleusercontent.com'
       }).then((res) => {
-          console.log("result:" + res);
-          let noGradeEnteredAlert = this.alertCtrl.create({
-              title: 'No Grades Entered!',
-              subTitle: 'Please enter a grade.',
-              buttons: ['Dismiss']
+          loading.dismiss();
+          loading = this.loadingControl.create({
+              content: "Signed in"
           });
-          noGradeEnteredAlert.present();
-      }, (err) => {
-          console.log("error: " + err);
+          loading.present();
+          console.log(res);
+          }, (err) => {
+              loading.dismiss();
+              //GooglePlus.login({
+              //    'webClientId': '1006825539066-t0c2chq3btsoibrsdvl5frkl9pn105dd.apps.googleusercontent.com'
+              //}).then((res) => {
+              //    loading.dismiss();
+              //    loading = this.loadingControl.create({
+              //        content: "Signed in"
+              //    });
+              //    loading.present();
+              //    console.log(res);
+              //}, (err) => {
+              //    loading.dismiss();
+              //    GooglePlus.login({
+              //        'webClientId': '1006825539066-k7e7oi54kdaq409tb8e7ungf57vninc9.apps.googleusercontent.com'
+              //    }).then((res) => {
+              //        loading.dismiss();
+              //        loading = this.loadingControl.create({
+              //            content: "Signed in"
+              //        });
+              //        loading.present();
+              //        console.log(res);
+              //    }, (err) => {
+              //        loading.dismiss();
+              //        GooglePlus.login({
+              //            'webClientId': '1006825539066-6j2v43naudqnadchoe8s8u6439u9d9pa.apps.googleusercontent.com'
+              //        }).then((res) => {
+              //            loading.dismiss();
+              //            loading = this.loadingControl.create({
+              //                content: "Signed in"
+              //            });
+              //            loading.present();
+              //            console.log(res);
+              //        }, (err) => {
+              //            loading.dismiss();
+              //            loading = this.loadingControl.create({
+              //                content: err
+              //            });
+              //            loading.present();
+              //            console.log(err);
+              //        });
+              //    });
+              //});
+              loading = this.loadingControl.create({
+                             content: "ERROR SignING in: " + err
+                          });
+              loading.present();
+          console.log(err);
       });
 
   }

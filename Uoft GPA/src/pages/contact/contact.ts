@@ -19,9 +19,10 @@ export class ContactPage {
         platform.ready().then(() => {
 
             
-
+            var testId = 'ca-app-pub-6937425280917661/1053575230';
+            var productionId = 'ca-app-pub-6937425280917661/1053575230';
             AdMob.createBanner({
-                adId: 'ca-app-pub-6937425280917661/1053575230',
+                adId: productionId,
                 adSize: 'SMART_BANNER',
                 isTesting: true
             }).then(() => {
@@ -30,7 +31,7 @@ export class ContactPage {
 
         });
     }
-    openFacebookPage() {
+    openFacebook() {
         window.open('https://www.facebook.com/TechMeister786/?view_public_for=697666376935125');
     }
     openTwitter() {

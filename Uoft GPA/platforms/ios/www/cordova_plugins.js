@@ -67,14 +67,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-googleplus.GooglePlus",
-        "file": "plugins/cordova-plugin-googleplus/www/GooglePlus.js",
-        "pluginId": "cordova-plugin-googleplus",
-        "clobbers": [
-            "window.plugins.googleplus"
-        ]
-    },
-    {
         "id": "cordova-plugin-splashscreen.SplashScreen",
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "pluginId": "cordova-plugin-splashscreen",
@@ -95,7 +87,6 @@ module.exports.metadata =
     "cordova-plugin-extension": "1.5.1",
     "cordova-plugin-admobpro": "2.28.3",
     "cordova-connectivity-monitor": "1.2.2",
-    "cordova-plugin-googleplus": "5.1.1",
     "cordova-plugin-splashscreen": "4.0.3"
 };
 // BOTTOM OF METADATA

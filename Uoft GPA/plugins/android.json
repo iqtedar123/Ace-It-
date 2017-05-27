@@ -31,9 +31,6 @@
         "cordova-connectivity-monitor": {
             "PACKAGE_NAME": "com.techseven.uoftgpanew"
         },
-        "cordova-plugin-googleplus": {
-            "PACKAGE_NAME": "com.techseven.uoftgpanew"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.techseven.uoftgpanew"
         }

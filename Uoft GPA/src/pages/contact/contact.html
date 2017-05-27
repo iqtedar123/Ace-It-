@@ -1,26 +1,25 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Contact
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow on Twitter</ion-list-header>
-    <ion-item>
-        <button ion-button icon-right  (click)="openTwitter()">
-            <ion-icon name="logo-twitter"></ion-icon>
-                @iQtedar_c
-        </button>
-    </ion-item>
-    <ion-list-header>Follow on Facebook</ion-list-header>
-    <ion-item>
-        <button ion-button icon-right (click)="openFacebook()">
-            <ion-icon name="logo-facebook"></ion-icon>
+    <ion-list no-lines>
+        <ion-list-header>Follow Me</ion-list-header>
+        <ion-item>
+            <button ion-button icon-left (click)="openTwitter()">
+                <ion-icon name="logo-twitter"></ion-icon>
+                  @iQtedar_c
+            </button>
+        </ion-item>
+        <ion-item>
+            <button ion-button icon-left (click)="openFacebook()">
+                <ion-icon name="logo-facebook"></ion-icon>
                 TechMeister786 Developments
-        </button>
-    </ion-item>
+            </button>
+        </ion-item>
     </ion-list>
 </ion-content>

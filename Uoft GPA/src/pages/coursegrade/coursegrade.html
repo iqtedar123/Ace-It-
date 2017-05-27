@@ -5,121 +5,38 @@
 </ion-header>
 
 <ion-content padding>
-    <h2 class="center" color="primary">Quick Calculation</h2>
+    <h2 class="center" color="primary">Calculate your mark in a course</h2>
 
 
     <ion-card class="list card animated slideInDown">
-        <ion-list>
-            <ion-item>
-                <ion-label color="primary">Course Name</ion-label>
-                <ion-input name="course_name_1" id="course_name_1" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name1"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_1" id="course_grade_1" type="number" placeholder="100" [(ngModel)]="grade1"></ion-input>
-            </ion-item>
-            <ion-list radio-group [(ngModel)]="weight1">
-                <ion-item>
-                    <ion-label>Half Credit</ion-label>
-                    <ion-radio value="0.5" checked="true"></ion-radio>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Full Credit</ion-label>
-                    <ion-radio value="1.0"></ion-radio>
-                </ion-item>
-            </ion-list>
-        </ion-list>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-auto><ion-input name="mark_1" clearInput="true" id="mark_1" type="number" placeholder="Mark" [(ngModel)]="mark1"></ion-input></ion-col>
+                <ion-col col-auto><ion-input name="weight_1" id="weight_1" type="number" placeholder="Weight(%)" [(ngModel)]="weight1"></ion-input></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-auto>
+                    <ion-input name="mark_2" id="mark_2" type="number" placeholder="Mark" [(ngModel)]="mark2"></ion-input>
+                </ion-col>
+                <ion-col col-auto> <ion-input name="weight_2" id="weight_2" type="number" placeholder="Weight(%)" [(ngModel)]="weight2"></ion-input></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-auto>  <ion-input name="mark_3" id="mark_3" type="number" placeholder="Mark" [(ngModel)]="mark3"></ion-input></ion-col>
+                <ion-col col-auto> <ion-input name="weight_3" id="weight_3" type="number" placeholder="Weight(%)" [(ngModel)]="weight3"></ion-input></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-auto>  <ion-input name="mark_4" id="mark_4" type="number" placeholder="Mark" [(ngModel)]="mark4"></ion-input></ion-col>
+                <ion-col col-auto> <ion-input name="weight_4" id="weight_4" type="number" placeholder="Weight(%)" [(ngModel)]="weight4"></ion-input></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-auto>  <ion-input name="mark_5" id="mark_5" type="number" placeholder="Mark" [(ngModel)]="mark5"></ion-input></ion-col>
+                <ion-col col-auto>  <ion-input name="weight_5" id="weight_5" type="number" placeholder="Weight(%)" [(ngModel)]="weight5"></ion-input></ion-col>
+            </ion-row>
+        </ion-grid>
     </ion-card>
-    <ion-card class="list card animated slideInDown">
-        <ion-list>
-            <ion-item>
-                <ion-label color="primary">Course Name</ion-label>
-                <ion-input name="course_name_2" id="course_name_2" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name2"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_2" id="course_grade_2" type="number" placeholder="100" [(ngModel)]="grade2"></ion-input>
-            </ion-item>
-            <ion-list radio-group [(ngModel)]="weight2">
-                <ion-item>
-                    <ion-label>Half Credit</ion-label>
-                    <ion-radio value="0.5" checked="true"></ion-radio>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Full Credit</ion-label>
-                    <ion-radio value="1.0"></ion-radio>
-                </ion-item>
-            </ion-list>
-        </ion-list>
-    </ion-card>
-    <ion-card class="list card animated slideInDown">
-        <ion-list>
-            <ion-item>
-                <ion-label color="primary">Course Name</ion-label>
-                <ion-input name="course_name_3" id="course_name_3" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name3"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_3" id="course_grade_3" type="number" placeholder="100" [(ngModel)]="grade3"></ion-input>
-            </ion-item>
-            <ion-list radio-group [(ngModel)]="weight3">
-                <ion-item>
-                    <ion-label>Half Credit</ion-label>
-                    <ion-radio value="0.5" checked="true"></ion-radio>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Full Credit</ion-label>
-                    <ion-radio value="1.0"></ion-radio>
-                </ion-item>
-            </ion-list>
-        </ion-list>
-    </ion-card>
-    <ion-card class="list card animated slideInDown">
-        <ion-list>
-            <ion-item>
-                <ion-label color="primary">Course Name</ion-label>
-                <ion-input name="course_name_4" id="course_name_4" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name4"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_4" id="course_grade_4" type="number" placeholder="100" [(ngModel)]="grade4"></ion-input>
-            </ion-item>
-            <ion-list radio-group [(ngModel)]="weight4">
-                <ion-item>
-                    <ion-label>Half Credit</ion-label>
-                    <ion-radio value="0.5" checked="true"></ion-radio>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Full Credit</ion-label>
-                    <ion-radio value="1.0"></ion-radio>
-                </ion-item>
-            </ion-list>
-        </ion-list>
-    </ion-card>
-    <ion-card class="list card animated slideInDown">
-        <ion-list>
-            <ion-item>
-                <ion-label color="primary">Course Name</ion-label>
-                <ion-input name="course_name_5" id="course_name_5" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name5"></ion-input>
-            </ion-item>
-            <ion-item>
-                <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_5" id="course_grade_5" type="number" placeholder="100" [(ngModel)]="grade5"></ion-input>
-            </ion-item>
-            <ion-list radio-group [(ngModel)]="weight5">
-                <ion-item>
-                    <ion-label>Half Credit</ion-label>
-                    <ion-radio value="0.5" checked="true"></ion-radio>
-                </ion-item>
-                <ion-item>
-                    <ion-label>Full Credit</ion-label>
-                    <ion-radio value="1.0"></ion-radio>
-                </ion-item>
-            </ion-list>
-        </ion-list>
-    </ion-card>
+
     <ion-fab right bottom>
-        <button ion-fab color="dark" (click)="calculate()"><ion-icon name="calculator" color="secondary"></ion-icon></button>
+        <button ion-fab color="dark" (click)="calculate()"><ion-icon name="calculator" color="primary"></ion-icon></button>
     </ion-fab>
 
 </ion-content>

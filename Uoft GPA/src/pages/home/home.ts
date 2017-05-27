@@ -31,8 +31,10 @@ export class HomePage {
 
 
 
+            var testId = 'ca-app-pub-6937425280917661/1053575230';
+            var productionId = 'ca-app-pub-6937425280917661/1053575230';
             AdMob.createBanner({
-                adId: 'ca-app-pub-6937425280917661/1053575230',
+                adId: productionId,
                 adSize: 'SMART_BANNER',
                 isTesting: true
             }).then(() => {

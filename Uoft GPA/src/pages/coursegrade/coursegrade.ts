@@ -180,4 +180,17 @@ export class CourseGradePage {
             this.remark = "Are you kidding? You're better than that!";
         }
     }
+    clearAll() {
+        //Clear the input fields. 
+        this.mark1 = undefined;
+        this.mark2 = undefined;
+        this.mark3 = undefined;
+        this.mark4 = undefined;
+        this.mark5 = undefined;
+        this.weight1 = undefined;
+        this.weight2 = undefined;
+        this.weight3 = undefined;
+        this.weight4 = undefined;
+        this.weight5 = undefined;
+    }
 }

@@ -3,11 +3,14 @@ import { Component } from '@angular/core';
 import { NavController, Platform, LoadingController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { GooglePlus, AdMob } from 'ionic-native';
+import { CourseGradePage } from "../coursegrade/coursegrade";
+
 interface StringMap { [s: string]: Number; }
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
     name1: any;
     name2: any;
@@ -24,12 +27,10 @@ export class HomePage {
     weight3: any;
     weight4: any;
     weight5: any;
-
     constructor(public navCtrl: NavController, private alertCtrl: AlertController, private platform: Platform, private loadingControl: LoadingController) {
         this.loadingControl = loadingControl;
+        this.navCtrl = navCtrl;
         platform.ready().then(() => {
-
-
 
             var testId = 'ca-app-pub-6937425280917661/1053575230';
             var productionId = 'ca-app-pub-6937425280917661/1053575230';
@@ -74,22 +75,7 @@ export class HomePage {
               buttons: [{
                   text: 'Dismiss',
                   handler: () => {
-                      //Clear the input fields. 
-                      this.grade1 = undefined;
-                      this.grade2 = undefined;
-                      this.grade3 = undefined;
-                      this.grade4 = undefined;
-                      this.grade5 = undefined;
-                      this.weight1 = '0.5';
-                      this.weight2 = '0.5';
-                      this.weight3 = '0.5';
-                      this.weight4 = '0.5';
-                      this.weight5 = '0.5';
-                      this.name1 = undefined;
-                      this.name2 = undefined;
-                      this.name3 = undefined;
-                      this.name4 = undefined;
-                      this.name5 = undefined;
+                      
                   }
               }]
           });
@@ -182,6 +168,38 @@ export class HomePage {
       });
       gpa = gpa / weightSum;
       return gpa;
+  }
+
+  clearAll() {
+      //Clear the input fields. 
+      this.grade1 = undefined;
+      this.grade2 = undefined;
+      this.grade3 = undefined;
+      this.grade4 = undefined;
+      this.grade5 = undefined;
+      this.weight1 = '0.5';
+      this.weight2 = '0.5';
+      this.weight3 = '0.5';
+      this.weight4 = '0.5';
+      this.weight5 = '0.5';
+      this.name1 = undefined;
+      this.name2 = undefined;
+      this.name3 = undefined;
+      this.name4 = undefined;
+      this.name5 = undefined;
+  }
+  goBack() {
+      let alert = this.alertCtrl.create({
+          title: 'Swiped',
+          buttons: [{
+              text: 'Dismiss',
+              handler: () => {
+
+              }
+          }]
+      });
+      alert.present();
+      this.navCtrl.push(CourseGradePage);
   }
   login() {
       let loading = this.loadingControl.create({

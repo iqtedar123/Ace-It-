@@ -7,26 +7,26 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CourseGradePage } from '../pages/coursegrade/coursegrade';
 @NgModule({
-  declarations: [
-    MyApp,
-      AboutPage,
-    CourseGradePage,
-    ContactPage,
-    HomePage,
-    TabsPage
-  ],
-  imports: [
-    IonicModule.forRoot(MyApp)
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-      AboutPage,
-    CourseGradePage,
-    ContactPage,
-    HomePage,
-    TabsPage
-  ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+    declarations: [
+        MyApp,
+        AboutPage,
+        CourseGradePage,
+        ContactPage,
+        HomePage,
+        TabsPage
+    ],
+    imports: [
+        IonicModule.forRoot(MyApp)
+    ],
+    bootstrap: [IonicApp],
+    entryComponents: [
+        MyApp,
+        AboutPage,
+        CourseGradePage,
+        ContactPage,
+        HomePage,
+        TabsPage
+    ],
+    providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
-export class AppModule {}
+export class AppModule { }

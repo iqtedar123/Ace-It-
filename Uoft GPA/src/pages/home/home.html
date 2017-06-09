@@ -1,11 +1,12 @@
 <ion-header>
     <ion-navbar>
         <ion-title>GPA Calculator</ion-title>
-    </ion-navbar>
+        <ion-buttons end><button ion-button color="primary" (click)="clearAll()"><ion-icon name="trash"></ion-icon></button></ion-buttons>
+</ion-navbar>
 </ion-header>
 
-<ion-content padding >
-    <h2 class="center" color="primary">Calculate your mark in a course</h2>
+<ion-content padding on-swipe-right="goBack()">
+    <h2 class="center" color="primary">Calculate your mark in a course.</h2>
 
 
     <ion-card class="list card animated slideInDown">
@@ -121,5 +122,20 @@
     <ion-fab right bottom>
         <button ion-fab color="dark" (click)="calculate()"><ion-icon name="calculator" color="primary"></ion-icon></button>
     </ion-fab>
-
+    <script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-messaging.js"></script>
+    <script>
+        // Initialize Firebase
+        //var config = {
+        //    apiKey: "AIzaSyCKY_DTLV2JESYADl7vbpADnlEbc2dGTJU",
+        //    authDomain: "myproj1-1bb65.firebaseapp.com",
+        //    databaseURL: "https://myproj1-1bb65.firebaseio.com",
+        //    projectId: "myproj1-1bb65",
+        //    storageBucket: "myproj1-1bb65.appspot.com",
+        //    messagingSenderId: "715130524268"
+        //};
+        //firebase.initializeApp(config);
+    </script>
 </ion-content>

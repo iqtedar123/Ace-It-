@@ -18,7 +18,7 @@ export class AboutPage {
           AdMob.createBanner({
               adId: productionId,
               adSize: 'SMART_BANNER',
-              isTesting: true
+              isTesting: false
           }).then(() => {
               AdMob.showBanner(2);
           });

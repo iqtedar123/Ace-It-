@@ -1,7 +1,8 @@
 <ion-header>
     <ion-navbar>
         <ion-title>GPA Calculator</ion-title>
-        <ion-buttons end><button ion-button color="primary" (click)="clearAll()"><ion-icon name="trash"></ion-icon></button></ion-buttons>
+        <ion-buttons end><button ion-button color="primary" (click)="clearAll()"><ion-icon name="trash"></ion-icon></button>
+        <button ion-button color ="primary" (click) ="addElement()"><ion-icon name="add"></ion-icon></button></ion-buttons>
 </ion-navbar>
 </ion-header>
 
@@ -17,7 +18,7 @@
             </ion-item>
             <ion-item>
                 <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_1" id="course_grade_1" type="number" placeholder="100" [(ngModel)]="grade1"></ion-input>
+                <ion-input name="course_grade_1" id="course_grade_1" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade1"></ion-input>
             </ion-item>
             <ion-list radio-group [(ngModel)]="weight1">
                 <ion-item>
@@ -39,7 +40,7 @@
             </ion-item>
             <ion-item>
                 <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_2" id="course_grade_2" type="number" placeholder="100" [(ngModel)]="grade2"></ion-input>
+                <ion-input name="course_grade_2" id="course_grade_2" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade2"></ion-input>
             </ion-item>
             <ion-list radio-group [(ngModel)]="weight2">
                 <ion-item>
@@ -61,7 +62,7 @@
             </ion-item>
             <ion-item>
                 <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_3" id="course_grade_3" type="number" placeholder="100" [(ngModel)]="grade3"></ion-input>
+                <ion-input name="course_grade_3" id="course_grade_3" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade3"></ion-input>
             </ion-item>
             <ion-list radio-group [(ngModel)]="weight3">
                 <ion-item>
@@ -83,7 +84,7 @@
             </ion-item>
             <ion-item>
                 <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_4" id="course_grade_4" type="number" placeholder="100" [(ngModel)]="grade4"></ion-input>
+                <ion-input name="course_grade_4" id="course_grade_4" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade4"></ion-input>
             </ion-item>
             <ion-list radio-group [(ngModel)]="weight4">
                 <ion-item>
@@ -105,7 +106,7 @@
             </ion-item>
             <ion-item>
                 <ion-label color="primary">Grade</ion-label>
-                <ion-input name="course_grade_5" id="course_grade_5" type="number" placeholder="100" [(ngModel)]="grade5"></ion-input>
+                <ion-input name="course_grade_5" id="course_grade_5" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade5"></ion-input>
             </ion-item>
             <ion-list radio-group [(ngModel)]="weight5">
                 <ion-item>
@@ -119,14 +120,169 @@
             </ion-list>
         </ion-list>
     </ion-card>
-    <ion-fab right bottom>
-        <button ion-fab color="dark" (click)="calculate()"><ion-icon name="calculator" color="primary"></ion-icon></button>
-    </ion-fab>
-    <script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-messaging.js"></script>
-    <script>
+    <ion-card class="list card animated slideInDown" style="display:none;" id="card6">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_6" id="course_name_6" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name6"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_6" id="course_grade_6" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade6"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight6">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+    <ion-card class="list card animated slideInDown" style="display:none;" visible="false" id="card7">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_7" id="course_name_7" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name7"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_7" id="course_grade_7" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade7"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight7">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+    <ion-card class="list card animated slideInDown" style="display:none;" visible="false" id="card8">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_8" id="course_name_8" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name8"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_8" id="course_grade_8" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade8"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight8">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+    <ion-card class="list card animated slideInDown" style="display:none;" id="card9">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_9" id="course_name_9" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name9"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_9" id="course_grade_9" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade9"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight9">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+
+    <ion-card class="list card animated slideInDown" style="display:none;" id="card10">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_10" id="course_name_10" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name10"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_10" id="course_grade_10" type="number" max="100" min="0" placeholder="100" [(ngModel)]="grade10"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight10">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+    <ion-card class="list card animated slideInDown" style="display:none;" id="card11">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_11" id="course_name_11" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name11"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_11" id="course_grade_11" type="number" max="100" min="0" placeholder="110" [(ngModel)]="grade11"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight11">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+    <ion-card class="list card animated slideInDown" style="display:none;" id="card12">
+        <ion-list>
+            <ion-item>
+                <ion-label color="primary">Course Name</ion-label>
+                <ion-input name="course_name_12" id="course_name_12" type="text" placeholder="Eg. CSC309" text-uppercase [(ngModel)]="name12"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label color="primary">Grade</ion-label>
+                <ion-input name="course_grade_12" id="course_grade_12" type="number" max="100" min="0" placeholder="120" [(ngModel)]="grade12"></ion-input>
+            </ion-item>
+            <ion-list radio-group [(ngModel)]="weight12">
+                <ion-item>
+                    <ion-label>Half Credit</ion-label>
+                    <ion-radio value="0.5" checked="true"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Full Credit</ion-label>
+                    <ion-radio value="1.0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-list>
+    </ion-card>
+        <ion-fab right bottom>
+            <button ion-fab color="dark" (click)="calculate()"><ion-icon name="calculator" color="primary"></ion-icon></button>
+        </ion-fab>
+        <script src="https://www.gstatic.com/firebasejs/4.1.0/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase-messaging.js"></script>
+        <script>
         // Initialize Firebase
         //var config = {
         //    apiKey: "AIzaSyCKY_DTLV2JESYADl7vbpADnlEbc2dGTJU",
@@ -137,5 +293,5 @@
         //    messagingSenderId: "715130524268"
         //};
         //firebase.initializeApp(config);
-    </script>
+        </script>
 </ion-content>

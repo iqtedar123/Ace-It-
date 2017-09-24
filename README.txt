@@ -1,6 +1,8 @@
 I created this application to help other students calculate their GPA. 
 *No affiliation with any University/College. 
 
+Here is a link to the official store listing: 
+https://play.google.com/store/apps/details?id=com.techseven.uoftgpanew
 
 Here are some details from the store listing:
 
